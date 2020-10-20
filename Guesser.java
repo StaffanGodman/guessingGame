@@ -7,7 +7,7 @@ import java.io.Console;
  * for the Guesser class. It is your
  * task to complete the missing parts.
  */
-public class Guesser{
+public class Guesser {
     private int low;
     private int high;
 
@@ -23,7 +23,7 @@ public class Guesser{
    */
   // Write the constructor below this line.
 
-    public Guesser (int low, int high){
+    public Guesser (int low, int high) {
         this.low = low;
         this.high = high;
     }
@@ -33,14 +33,14 @@ public class Guesser{
    * in the method body, you call first the
    * rules() method, next the doGuesses() method.
    */
-    public void start(){
+    public void start() {
         rules();
         doGuesses();
     // call the rules method here
     // call the doGuesses() method here
     }
 
-    private void rules(){
+    private void rules() {
         System.out.println("Think of a number between " +
                        low + " and "  + high);
         System.out.println("I'm going to ask a few questions in order " +
@@ -58,8 +58,13 @@ public class Guesser{
    * a valid reply. Return the String that you read from
    * the player.
    */
-private String getReply(){
-String reply = null;
+    private String getReply() {
+        String reply;
+        reply = System.console().readLine();
+        while (!reply.equals("T") && !reply.equals("F")) {
+            System.out.println("please answer T or F");
+            reply = System.console().readLine();
+        }
     // Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
