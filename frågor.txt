@@ -1,0 +1,38 @@
+Jag siktar på VG.
+
+-Man använder add när man vill lägga in de ändringar man gjort i staging area, här lägger man
+in det som sk avar amed i nästa commit. Man använder commit när man vill skapa en ny revision i 
+sitt repository, dvs låsa in ändringarna och göra de tillgängliga för alla användare.
+
+-Pull är en kombination av fetch och merge. Man laddar ned nya versioner av filer från ett 
+centralt repository och slår samman de med versionerna man har lokalt. Push är motsatsen, man 
+laddar upp sina committade ändringar till ett centralt repository.
+
+-Log visar vad som hänt i den aktuella branchen. Man får en lista över vilka commits som gjorts.
+I listan kan man se commitsträngar, tidpunkter och kommentarer (commit-meddelanden). Status visar
+vad som händer i den aktuella branchen just nu. Man får information om vad som finns i staging area,
+vilka filer som måste läggas in i staging area och om man är synkroniserad mot sitt centrala repository.
+
+-När man sparar filen första gången kan man skriva vad det är för typ av fil (class, main, textfil etc),
+att man lagt till den ("Added example.java"). När man sedan ändrar i filen ska man skriva ut vilka 
+ändringar man gjort, vilken effekt de har och evt varför. Man ska skriva med all relevant information för 
+varje revision men hålla sig så kortfattad som möjligt. 
+
+-Checkout används för att gå tillbaka till en tidigare commit. Man kan kompilera filerna, köra tester
+och även ändra filerna men inget man gör kommer sparas i ditt repository. Är bra när man vill se hur
+något byggts upp bit för bit eller bara se på vad man tagit bort sen dess.
+
+-Revert gör en ny commit som tar bort alla ändringar du gjorde i en commit utan att ta bort den
+från historiken. Det är som att backa ett steg men lämna kvar fotspåret. Det är bra för att visa
+det exakta arbetsflödet. Om det är viktigt att ha så liten git-historik som möjligt är detta inte
+så bra dock eftersom det blir fler commits i historiken.
+
+-Reset tar bort en commit från historiken helt och hållet. Kan vara bra för ens lokala repository
+men kan leda till problem om man jobbar mot ett delat centralt repository som har kvar denna commit.
+Om man försöker pusha sin branch kommer den inte matcha eftersom den saknar commiten man tog bort.
+
+-med git commit --amend kan man ändra meddelandet i sin senaste commit utan att behöva använda revert
+eller reset.
+
+
+
