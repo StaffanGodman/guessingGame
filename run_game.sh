@@ -6,10 +6,8 @@ mkdir Staffan_Godman_labb
 cd ./Staffan_Godman_labb
 cp ../Guesser.java ./Guesser.java
 cp ../GuessingGame.java ./GuessingGame.java
-cd ..
 echo -n "Running game from: "
 pwd
-cd ./Staffan_Godman_labb
 echo "Compiling..."
 javac Guesser.java GuessingGame.java
 echo -e "Running game...\n"
