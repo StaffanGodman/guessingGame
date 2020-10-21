@@ -1,12 +1,11 @@
 #!bin/bash/
 
 echo "Staffan Godmans program"
+echo "Creating subdirectory and copying files..."
 mkdir Staffan_Godman_labb
 cd ./Staffan_Godman_labb
-curl -L -s -JO "https://raw.githubusercontent.com/StaffanGodman/guessingGame/master/.gitignore"
-curl -L -s -JO "https://github.com/StaffanGodman/guessingGame/raw/master/Guesser.java"
-curl -L -s -JO "https://github.com/StaffanGodman/guessingGame/raw/master/GuessingGame.java"
-curl -L -s -JO "https://github.com/StaffanGodman/guessingGame/raw/master/frågor.txt"
+cp ../Guesser.java ./Guesser.java
+cp ../GuessingGame.java ./GuessingGame.java
 cd ..
 echo -n "Running game from: "
 pwd
